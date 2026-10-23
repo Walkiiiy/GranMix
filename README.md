@@ -1,23 +1,7 @@
 # GranMix
 
-Code for GranMix, including training, checkpoint resume, and evaluation.
+Code for GranMix
 
-## Structure
-
-```text
-code/
-  main.py           Command-line entry
-  diagnosis.py      Partition Diagnosis (Section 3, Algorithm 1)
-  refinement.py     Partition Refinement (Section 4, Algorithm 2)
-  handoff.py        Mixture Handoff (Section 5, Algorithm 3)
-  train.py          Model, optimizer, training, checkpoints, and evaluation
-  data.py           Reference tree, corpus, and sampling
-  config.py         Experiment configuration
-  utils.py          Asset checks and serialization
-  requirements.txt
-configs/            Six main-experiment configurations
-assets/             Pythia-160M configuration, tokenizer, and fixed tree
-```
 
 ## Environment
 
@@ -34,8 +18,6 @@ Pass the tokenized corpus root with `--data`. Each domain contains
 `train.bin`, `val.bin`, and `test.bin` as uint16 token streams.
 Tokenization and row order must match `assets/identity.json` and the bundled
 tree labels. Large corpus files and trained checkpoints are not included.
-
-The model is initialized from the bundled Pythia configuration.
 Cases: `ase`, `ghc4`, `bse`, `abse`, `ccghw`, and `seven`.
 
 ## Usage
