@@ -44,11 +44,3 @@ python main.py evaluate \
 GranMix is the default; use `--arm uniform` for the matched control.
 Outputs must use new paths. For a partial run, add `--end 250 --skip-evaluation`.
 Resume at a complete GranMix window boundary using a checkpoint from this code.
-
-The five compact cases use 5,000 nominal updates; `seven` uses 40,000 nominal
-and 39,439 actual updates. Each configuration specifies one seed.
-Training supports one CPU/CUDA device with gradient checkpointing disabled.
-Use `--allow-version-drift` for a different runtime; data checks still apply.
-
-`python main.py smoke --output /path/to/new_smoke` runs a small synthetic CPU
-experiment.
